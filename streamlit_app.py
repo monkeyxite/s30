@@ -98,14 +98,26 @@ import streamlit as st
 # st.write('You selected:', options)
 
 # D12
-st.header('st.checkbox')
-st.write ('What would you like to order?')
-icecream = st.checkbox('Ice cream')
-coffee = st.checkbox('Coffee')
-cola = st.checkbox('Cola')
-if icecream:
-     st.write("Great! Here's some more 🍦")
-if coffee: 
-     st.write("Okay, here's some coffee ☕")
-if cola:
-     st.write("Here you go 🥤")
+# st.header('st.checkbox')
+# st.write ('What would you like to order?')
+# icecream = st.checkbox('Ice cream')
+# coffee = st.checkbox('Coffee')
+# cola = st.checkbox('Cola')
+# if icecream:
+#      st.write("Great! Here's some more 🍦")
+# if coffee: 
+#      st.write("Okay, here's some coffee ☕")
+# if cola:
+#      st.write("Here you go 🥤")
+
+# D14
+import pandas as pd
+import pandas_profiling
+from streamlit_pandas_profiling import st_profile_report
+
+st.header('`streamlit_pandas_profiling`')
+
+df = pd.read_csv('https://raw.githubusercontent.com/dataprofessor/data/master/penguins_cleaned.csv')
+
+pr = df.profile_report()
+st_profile_report(pr)
