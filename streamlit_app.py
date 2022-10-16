@@ -38,10 +38,8 @@ import streamlit as st
 # st.write(c)
 
 # D8
-from datetime import time, datetime
-
-st.header('st.slider')
-
+# from datetime import time, datetime
+# st.header('st.slider')
 # Example 1
 # st.subheader('Slider')
 # age = st.slider('How old are you?', 0, 130, 25)
@@ -70,14 +68,23 @@ st.header('st.slider')
 # st.write("Start time:", start_time)
 
 # D9
-import pandas as pd
-import numpy as np
+# import pandas as pd
+# import numpy as np
 
-st.header('Line chart')
+# st.header('Line chart')
 
-chart_data = pd.DataFrame(
-     np.random.randn(20, 3),
-     columns=['a', 'b', 'c'])
-st.write(chart_data)
-st.line_chart(chart_data)
+# chart_data = pd.DataFrame(
+#      np.random.randn(20, 3),
+#      columns=['a', 'b', 'c'])
+# st.write(chart_data)
+# st.line_chart(chart_data)
 
+
+# D10
+st.header('st.selectbox')
+
+option = st.selectbox(
+     'What is your favorite color?',
+     ('Blue', 'Red', 'Green'))
+
+st.write('Your favorite color is ', option)
